@@ -65,6 +65,8 @@ const TechnicianBottomTab = () => {
             ) : (
               <ChatsIcon width={21} height={21} fill={color} />
             ),
+
+            headerShown: false,
         }}
       />
       <Tab.Screen
