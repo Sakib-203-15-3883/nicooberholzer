@@ -31,6 +31,7 @@ import TechnicianProfile from '../screens/TechnicianPartStackScreens/TechnicianP
 
 import TechnicianBottomTab from './TechnicianBottomTab';
 import ChatDetails from '../screens/TechnicianPartStackScreens/BottomScreens/ChatDetails';
+import Notification from '../screens/notification/Notification';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
 const Stack = createNativeStackNavigator();
@@ -200,8 +201,22 @@ const AppNavigation = () => {
 
         {/* // Technician side Profile screens start Start */}
         <Stack.Screen
-          name="My account"
+          name="Myaccount"
           component={TechnicianProfile}
+          options={{
+            headerStyle: {
+              backgroundColor: 'red', // Set the background color of the header to red
+              borderBottomLeftRadius: 40, // Set the bottom-left border radius
+              borderBottomRightRadius: 40, // Set the bottom-right border radius
+              elevation: 0, // Optional: To remove shadow on Android
+              shadowOpacity: 0, // Optional: To remove shadow on iOS
+            },
+            headerTintColor: 'white', // Optional: Set the text color in the header to white for contrast
+          }}
+        />
+        <Stack.Screen
+          name="Notification"
+          component={Notification}
           options={{
             headerStyle: {
               backgroundColor: 'red', // Set the background color of the header to red

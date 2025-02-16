@@ -28,7 +28,7 @@ const HeaderWithSearch = () => {
       <View style={styles.topSection}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('My account');
+            navigation.navigate('Myaccount');
           }}>
           {/* Left Side: Avatar and Text */}
           <View style={styles.leftContainer}>
@@ -41,7 +41,9 @@ const HeaderWithSearch = () => {
         </TouchableOpacity>
 
         {/* Right Side: Notification Icon */}
-        <TouchableOpacity style={styles.notificationButton}>
+        <TouchableOpacity onPress={() => {
+          navigation.navigate('Notification');
+        }} style={styles.notificationButton}>
           <SvgXml xml={IconNotification} />
         </TouchableOpacity>
       </View>
