@@ -30,6 +30,7 @@ import TechnicianProfile from '../screens/TechnicianPartStackScreens/TechnicianP
 // Technician side Profile screens start End
 
 import TechnicianBottomTab from './TechnicianBottomTab';
+import ChatDetails from '../screens/TechnicianPartStackScreens/BottomScreens/ChatDetails';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
 const Stack = createNativeStackNavigator();
@@ -226,7 +227,18 @@ const AppNavigation = () => {
             presentation: 'transparentModal',
           }}
         />
+
+        <Stack.Screen
+        
+        name='ChatDetail'
+        component={ChatDetails}
+        options={{
+          headerShown: false,
+         
+        }}
+        />
       </Stack.Navigator>
+      
 
       {/* // Technician side Bottom Navigator  screen End  */}
     </NavigationContainer>
