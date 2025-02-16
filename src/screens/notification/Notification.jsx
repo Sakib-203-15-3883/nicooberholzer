@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 
 const Notification = () => {
   const notifications = [
@@ -42,6 +42,9 @@ const Notification = () => {
   ];
 
   const NotificationItem = ({ item }) => (
+
+    <TouchableOpacity>
+      
     <View style={styles.itemContainer}>
       <View >
         <Text style={styles.title}>{item.title}</Text>
@@ -66,6 +69,7 @@ const Notification = () => {
       </View>
 
     </View>
+    </TouchableOpacity>
   );
 
   return (
