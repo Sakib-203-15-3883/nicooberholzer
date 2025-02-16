@@ -39,6 +39,12 @@ export const navigation = `<svg width="25" height="25" viewBox="0 0 25 25" fill=
 <path d="M14.7561 9.72733L15.3847 10.3559L10.0418 15.6988L9.41319 15.0702L14.7561 9.72733Z" fill="black"/>
 </svg>
 `
+export const NavigationIcon = `<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="25" height="25" rx="12.5" fill="white"/>
+<path d="M7.981 15.9809L13.9943 9.9676L9.32316 9.9676L9.32316 8.49983L16.5001 8.49984L16.5001 15.6768L15.0323 15.6768L15.0323 11.0056L9.01902 17.0189L7.981 15.9809Z" fill="black"/>
+</svg>
+
+`
 
 export const search = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#878787" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

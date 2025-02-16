@@ -2,8 +2,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {Dimensions, Platform, Text} from 'react-native';
 import Chats from '../screens/TechnicianPartStackScreens/BottomScreens/Chats';
-import InspectionSheet from '../screens/TechnicianPartStackScreens/BottomScreens/InspectionSheet';
-import JobCard from '../screens/TechnicianPartStackScreens/BottomScreens/JobCard';
+import InspectionSheet from '../screens/TechnicianPartStackScreens/BottomScreens/Inspection/InspectionSheet';
+import JobCard from '../screens/TechnicianPartStackScreens/BottomScreens/JobCard/JobCard';
 import Location from '../screens/TechnicianPartStackScreens/BottomScreens/Location';
 import Tickets from '../screens/TechnicianPartStackScreens/BottomScreens/Tickets/Tickets';
 
@@ -65,12 +65,15 @@ const TechnicianBottomTab = () => {
             ) : (
               <ChatsIcon width={21} height={21} fill={color} />
             ),
+
+          headerShown: false,
         }}
       />
       <Tab.Screen
         name="Inspection"
         component={InspectionSheet}
         options={{
+          headerShown: false,
           tabBarLabel: ({color}) => (
             <Text
               style={{
@@ -97,6 +100,7 @@ const TechnicianBottomTab = () => {
         name="JobCard"
         component={JobCard}
         options={{
+          headerShown: false,
           tabBarIcon: ({color, focused}) =>
             focused ? (
               <JobCardIconFocused width={24} height={24} fill="red" />

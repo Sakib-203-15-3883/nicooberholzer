@@ -29,8 +29,11 @@ import Verification from '../screens/TechnicianPartStackScreens/Verification';
 import TechnicianProfile from '../screens/TechnicianPartStackScreens/TechnicianProfile/TechnicianProfile';
 // Technician side Profile screens start End
 
+// Technician side main screens start Start
+import ChatDetails from '../screens/TechnicianPartStackScreens/BottomScreens/ChatDetails';
+import Notification from '../screens/TechnicianPartStackScreens/Notification';
 import TechnicianBottomTab from './TechnicianBottomTab';
-// import Icon from 'react-native-vector-icons/Ionicons';
+// Technician side main screens start End
 
 const Stack = createNativeStackNavigator();
 
@@ -214,6 +217,24 @@ const AppNavigation = () => {
 
         {/* // Technician side Profile screens start End */}
 
+        {/* // Technician side Main screens start  */}
+
+        <Stack.Screen
+          name="Notification"
+          component={Notification}
+          options={{
+            headerStyle: {
+              backgroundColor: 'red', // Set the background color of the header to red
+              borderBottomLeftRadius: 40, // Set the bottom-left border radius
+              borderBottomRightRadius: 40, // Set the bottom-right border radius
+              //
+            },
+            headerTintColor: 'white', // Optional: Set the text color in the header to white for contrast
+          }}
+        />
+
+        {/* // Technician side Main screens End  */}
+
         {/* // Technician side Bottom Navigator  screen start  */}
 
         <Stack.Screen
@@ -223,6 +244,14 @@ const AppNavigation = () => {
             headerShown: false,
             // animation: 'none',
             presentation: 'transparentModal',
+          }}
+        />
+
+        <Stack.Screen
+          name="ChatDetail"
+          component={ChatDetails}
+          options={{
+            headerShown: false,
           }}
         />
       </Stack.Navigator>

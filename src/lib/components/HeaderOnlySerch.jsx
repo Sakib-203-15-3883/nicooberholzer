@@ -13,7 +13,7 @@ import {SvgXml} from 'react-native-svg';
 import avatar from '../../assets/Icons/avater.png';
 import {IconNotification, search} from '../../assets/Icons/icons';
 
-const HeaderWithSearch = () => {
+const HeaderOnlySerch = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -25,36 +25,13 @@ const HeaderWithSearch = () => {
   return (
     <View style={styles.headerContainer}>
       {/* Top Section: Avatar, Welcome Text, and Notification Icon */}
-      <View style={styles.topSection}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('My account');
-          }}>
-          {/* Left Side: Avatar and Text */}
-          <View style={styles.leftContainer}>
-            <Image source={avatar} style={styles.avatar} />
-            <View>
-              <Text style={styles.welcomeText}>Welcome Back,</Text>
-              <Text style={styles.userName}>John Doe</Text>
-            </View>
-          </View>
-        </TouchableOpacity>
-
-        {/* Right Side: Notification Icon */}
-        <TouchableOpacity
-          style={styles.notificationButton}
-          onPress={() => {
-            navigation.navigate('Notification'); // Change to your actual parent stack screen name
-          }}>
-          <SvgXml xml={IconNotification} />
-        </TouchableOpacity>
-      </View>
+    <Text style={styles.title}>Chats</Text>
 
       {/* Search Box */}
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search tickets"
+          placeholder="search chats..."
           placeholderTextColor="gray"
         />
         <SvgXml xml={search} />
@@ -71,46 +48,28 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
   },
-  topSection: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  },
-  leftContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  avatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    marginRight: 10,
-  },
-  welcomeText: {
+
+  title: {
     color: 'white',
-    fontSize: 14,
-    fontWeight: '400',
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
+    paddingBottom: 8,
   },
-  userName: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  notificationButton: {
-    padding: 8,
-  },
+
+
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 10,
     paddingHorizontal: 10,
+    height: 40,
   },
   searchInput: {
     flex: 1,
     paddingVertical: 8,
-    fontSize: 16,
+    fontSize: 12,
     color: 'black',
   },
   searchIcon: {
@@ -118,4 +77,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HeaderWithSearch;
+export default HeaderOnlySerch;
