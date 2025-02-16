@@ -206,8 +206,7 @@ const AppNavigation = () => {
               backgroundColor: 'red', // Set the background color of the header to red
               borderBottomLeftRadius: 40, // Set the bottom-left border radius
               borderBottomRightRadius: 40, // Set the bottom-right border radius
-              elevation: 0, // Optional: To remove shadow on Android
-              shadowOpacity: 0, // Optional: To remove shadow on iOS
+              //
             },
             headerTintColor: 'white', // Optional: Set the text color in the header to white for contrast
           }}
